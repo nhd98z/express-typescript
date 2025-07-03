@@ -11,6 +11,11 @@ import rateLimiter from "@/common/middleware/rateLimiter";
 import requestLogger from "@/common/middleware/requestLogger";
 import { env } from "@/common/utils/envConfig";
 
+import { getEthToken, getSolanaToken } from "@b3dotfun/sdk/anyspend";
+
+console.log(`getEthToken`, getEthToken);
+console.log(`getSolanaToken`, getSolanaToken);
+
 const logger = pino({ name: "server start" });
 const app: Express = express();
 
